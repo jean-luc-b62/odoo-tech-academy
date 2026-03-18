@@ -8,7 +8,7 @@
     "license": "LGPL-3",
     "category": "Real Estate/Brokerage",
     "data": [
-        # declare view, security and data files here
+        "security/ir.model.access.csv",
     ],
     "demo": [
         # declare demo files here
