@@ -9,12 +9,14 @@ class EstateProperty(models.Model):
     _name = "estate.property"
     _description = "Real Estate Property"
 
-    _sql_constraints = [
-        ("check_expected_price_positive", "CHECK(expected_price > 0)",
-         "The Property's expected price must be positive."),
-        ("check_selling_price_positive", "CHECK(selling_price >= 0)",
-         "The Property's selling price must be positive."),
-    ]
+    _check_expected_price_positive = models.Constraint(
+        "CHECK(expected_price > 0)",
+        "The Property's expected price must be positive.",
+    )
+    _check_selling_price_positive = models.Constraint(
+        "CHECK(selling_price >= 0)",
+        "The Property's selling price must be positive.",
+    )
 
     name = fields.Char(required=True)
     description = fields.Text()
