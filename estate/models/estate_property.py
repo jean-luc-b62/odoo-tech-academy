@@ -91,6 +91,11 @@ class EstateProperty(models.Model):
                     float_compare(prop.selling_price, prop.expected_price * 0.9, precision_rounding=0.01) < 0:
                 raise ValidationError(_("The selling price cannot be lower than 90% of the expected price."))
 
+    def unlink(self):
+        if any(prop.state not in ("new", "cancelled") for prop in self):
+            raise UserError(_("You cannot delete a property that is not new or cancelled."))
+        return super().unlink()
+
     def action_sell_property(self):
         if any(prop.state == "cancelled" for prop in self):
             raise UserError(_("You cannot sell cancelled properties."))
