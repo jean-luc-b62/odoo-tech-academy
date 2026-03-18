@@ -6,7 +6,7 @@
         <field name="name">estate.property.list</field>
         <field name="model">estate.property</field>
         <field name="arch" type="xml">
-            <tree string="Properties">
+            <list string="Properties">
                 <field name="name" string="Title"/>
                 <field name="property_type_id"/>
                 <field name="tag_ids" widget="many2many_tags"/>
@@ -16,7 +16,7 @@
                 <field name="expected_price"/>
                 <field name="selling_price"/>
                 <field name="date_availability" optional="hide"/>
-            </tree>
+            </list>
         </field>
     </record>
 
