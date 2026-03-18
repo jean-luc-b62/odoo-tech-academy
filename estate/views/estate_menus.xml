@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- Root menu -->
+    <menuitem id="estate_menu_root" name="Estate" sequence="10"/>
+
+    <!-- First level submenu -->
+    <menuitem id="estate_menu_advertisements" name="Advertisements"
+              parent="estate_menu_root" sequence="10"/>
+
+    <!-- Second level submenu linked to action -->
+    <menuitem id="estate_menu_properties" name="Properties"
+              parent="estate_menu_advertisements"
+              action="estate_property_action" sequence="10"/>
+
+</odoo>
