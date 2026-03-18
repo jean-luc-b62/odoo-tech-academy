@@ -1,1 +1,1 @@
-from models.estate_property import EstateProperty
+from . import models
