@@ -1,4 +1,5 @@
 from odoo import api, fields, models
+from odoo.exceptions import UserError
 
 
 class EstatePropertyOffer(models.Model):
@@ -30,3 +31,15 @@ class EstatePropertyOffer(models.Model):
 
     def action_decline_offer(self):
         self.status = "refused"
+
+    @api.model_create_multi
+    def create(self, vals_list):
+        for vals in vals_list:
+            prop = self.env["estate.property"].browse(vals["property_id"])
+            prop.state = "offer_received"
+            if not prop.offer_ids:
+                continue
+            min_price = min(prop.offer_ids.mapped("price"))
+            if vals["price"] <= min_price:
+                raise UserError(_("The price of the offer must be higher than %s", min_price))
+            return super().create(vals_list)
