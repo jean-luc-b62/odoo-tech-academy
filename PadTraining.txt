@@ -1,0 +1,19 @@
+
+
+Formateur: pal@odoo.com
+
+Liens utiles
+----------------
+Slides: https://docs.google.com/presentation/d/e/2PACX-1vQisHrYOokVviyAqwsfYfIFL6zTam9_cx2ONxBLT-Q8nJklNRD7nRfhkDwGQ9NDGYdEzd1PMg8sc-IT/pub?start=false&loop=false&delayms=3000&slide=id.g3ce25a947d6_2_388
+
+Slides (version PDF): https://drive.google.com/file/d/1lD4dO0jurk3JRuVxEA0D_KteWCatSdw5/view?usp=drive_link
+
+Projet Odoo SH: https://www.odoo.sh/project/pal-odoo-odoo-tech-academy/branches/main
+
+Environnements de travail par utilisateur: https://docs.google.com/spreadsheets/d/12P7PLgRElbv-iWLxwzRE30blOTjYRCAXPjrftTpRdyA/edit?usp=sharing
+
+Documentation Odoo & tutoriel: https://www.odoo.com/documentation/19.0/developer/tutorials/server_framework_101.html
+
+Répertoire GitHub de la formation: https://github.com/pal-odoo/odoo-tech-academy
+
+Répertoire GitHub de Odoo: https://github.com/odoo/odoo/tree/19.0
